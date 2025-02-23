@@ -8,3 +8,5 @@ module.exports = ({ env }) => ({
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
 });
+
+console.log(`Server running on http://localhost:${process.env.PORT || 10000}`);
