@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avaliacaos",
+  "info": {
+    "singularName": "avaliacao",
+    "pluralName": "avaliacaos",
+    "displayName": "Avaliação",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Corpo": {
+      "type": "string"
+    },
+    "Feedback": {
+      "type": "boolean",
+      "required": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "avaliacaos"
+    },
+    "jogo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::jogo.jogo",
+      "inversedBy": "avaliacaos"
+    }
+  }
+}

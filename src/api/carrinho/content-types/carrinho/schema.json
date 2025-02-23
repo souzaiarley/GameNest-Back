@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carrinhos",
+  "info": {
+    "singularName": "carrinho",
+    "pluralName": "carrinhos",
+    "displayName": "Carrinho",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jogos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::jogo.jogo"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "carrinho"
+    }
+  }
+}
