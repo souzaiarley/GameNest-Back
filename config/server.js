@@ -9,4 +9,3 @@ module.exports = ({ env }) => ({
   },
 });
 
-console.log(`Server running on http://localhost:${process.env.PORT || 10000}`);
